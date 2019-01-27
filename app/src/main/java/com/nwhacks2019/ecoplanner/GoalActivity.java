@@ -29,17 +29,9 @@ public class GoalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_goal);
         enterCurr = (EditText) findViewById(R.id.currHabit);
         enterGoal = (EditText) findViewById(R.id.newHabit);
-
-        Button createGoalButton = (Button) findViewById(R.id.create_goal_button);
-        createGoalButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptCreateGoal();
-            }
-        });
     }
 
-    private void attemptCreateGoal(){
+    public void attemptCreateGoal(View v){
         try {
             Controller.createGoal();
             Controller.updateGoalCurr(enterCurr.getText().toString());
