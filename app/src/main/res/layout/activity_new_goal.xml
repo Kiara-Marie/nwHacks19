@@ -10,24 +10,25 @@
         android:layout_height="715dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TableRow>
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent">
             <TextView
                 android:text="What category of goal?"
                 />
     </TableRow>
 
 
-    <TableRow>
+    <TableRow
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:layout_height="match_parent"
+            android:layout_height="match_parent">
         <Button
             android:id="@+id/DietButton"
             android:layout_width="match_parent"
@@ -36,10 +37,10 @@
             android:text="Diet" />
     </TableRow>
 
-        <TableRow>
+        <TableRow
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="match_parent">
             <Button
                 android:id="@+id/PlasticUseButton"
                 android:layout_width="match_parent"
@@ -51,6 +52,13 @@
         <TableRow
             android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+            <Button
+        android:id="@+id/WaterUseButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Reducing Water Use" />
+    </TableRow>
     </TableLayout>
 </android.support.constraint.ConstraintLayout>

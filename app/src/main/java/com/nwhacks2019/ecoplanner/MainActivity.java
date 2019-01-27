@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         Button seeGoalsButton = (Button) findViewById(R.id.SeeGoalsButton);
         makeListener(seeGoalsButton,SeeGoalsActivity.class);
 
+        Button seeImpactButton = (Button) findViewById(R.id.SeeImpactButton);
+        makeListener(seeImpactButton,SeeImpactActivity.class);
+
     }
 
     private void makeListener(Button b, final Class c){
