@@ -1,6 +1,9 @@
 package com.nwhacks2019.ecoplanner.model;
 
-public interface Progress {
+import android.widget.ImageView;
 
-    void display();
+public interface Progress {
+    public String words();
+    public boolean hasImg();
+    public ImageView getImage();
 }
