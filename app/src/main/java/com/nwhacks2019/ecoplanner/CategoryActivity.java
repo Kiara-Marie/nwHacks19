@@ -9,7 +9,6 @@ import android.widget.ListView;
 import com.nwhacks2019.ecoplanner.Controller.Controller;
 import com.nwhacks2019.ecoplanner.FrontEnd.GoalAdapter;
 import com.nwhacks2019.ecoplanner.FrontEnd.GoalType;
-import com.nwhacks2019.ecoplanner.model.ShowerShorten;
 
 import java.util.ArrayList;
 

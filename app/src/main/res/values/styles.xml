@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorButtonNormal">@color/buttonColor</item>
         <item name="android:textAppearanceButton">@style/TextAppearance.AppCompat.Button.Custom</item>
-        <item name="android:windowBackground">@drawable/welcome_background</item>
+        <item name="android:windowBackground">@drawable/main_back</item>
     </style>
 
     <style name="TextAppearance.AppCompat.Button.Custom">

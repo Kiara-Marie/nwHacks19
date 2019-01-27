@@ -29,6 +29,9 @@ public class GoalCategoryAdapter extends ArrayAdapter<GoalCategory> {
         TextView gcName = (TextView) convertView.findViewById(R.id.gcName);
         // Populate the data into the template view using the data object
         gcName.setText(goalCat.name);
+        gcName.setTextColor(getContext().getResources().getColor(R.color.colorPrimaryDark));
+        gcName.setTextSize(25);
+        gcName.setBackgroundColor(getContext().getResources().getColor(R.color.colorAccentFade));
         gcName.setOnClickListener(goalCat.onClick);
         // Return the completed view to render on screen
         return convertView;

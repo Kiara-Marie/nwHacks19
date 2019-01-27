@@ -1,62 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GoalActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/OldMeasure"/>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    android:layout_column="4"
+    android:useDefaultMargins="true"
+    tools:context=".MainActivity">
 
-        <EditText
-            android:id="@+id/currHabit"
+    <EditText
+        android:layout_column="0"
+        android:layout_row="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:hint="@string/shower_how_long"/>
+
+    <EditText
+        android:layout_column="0"
+        android:layout_row="1"
+        android:layout_gravity="center_horizontal"
+        android:hint="@string/want_to_shower_for"/>
+
+
+    <TableLayout
+        android:layout_column="0"
+        android:layout_row="2"
+        android:layout_width="395dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constrainedWidth="true">
+
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:imeActionId="6"
-            android:imeActionLabel="@string/action_sign_in_short"
-            android:imeOptions="actionUnspecified"
-            android:inputType="number"
-            android:maxLines="1"
-            android:singleLine="true" />
+            android:layout_height="match_parent">
 
-    </android.support.design.widget.TextInputLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/NewMeasure"/>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/NewGoalButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="newGoalOnClick"
+                android:text="Set this Goal!" />
+        </TableRow>
+    </TableLayout>
 
-        <EditText
-            android:id="@+id/newHabit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:imeActionId="6"
-            android:imeActionLabel="@string/action_sign_in_short"
-            android:imeOptions="actionUnspecified"
-            android:inputType="number"
-            android:maxLines="1"
-            android:singleLine="true" />
-
-        <Button
-            android:id="@+id/create_goal_button"
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Create Goal!"
-            android:textStyle="bold" />
-
-    </android.support.design.widget.TextInputLayout>
-
-    <include layout="@layout/content_goal" />
-
-
-
-</android.support.design.widget.CoordinatorLayout>
+</GridLayout>
