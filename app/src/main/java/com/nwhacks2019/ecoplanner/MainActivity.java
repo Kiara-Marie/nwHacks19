@@ -12,29 +12,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button newGoalButton = (Button) findViewById(R.id.NewGoalButton);
-        makeListener(newGoalButton,NewGoalActivity.class);
-
-        Button seeGoalsButton = (Button) findViewById(R.id.SeeGoalsButton);
-        makeListener(seeGoalsButton,SeeGoalsActivity.class);
-
-        Button seeImpactButton = (Button) findViewById(R.id.SeeImpactButton);
-        makeListener(seeImpactButton,SeeImpactActivity.class);
-
     }
 
-    private void makeListener(Button b, final Class c){
-        View.OnClickListener newGoalListener = new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                startActivity(new Intent(MainActivity.this,c));
-            }
-        };
-        if (b != null) {
-            b.setOnClickListener(newGoalListener);
-        }
+    public void seeGoalsOnClick(View v) {
+        startActivity(new Intent(MainActivity.this, SeeGoalsActivity.class));
     }
 
+    public void newGoalOnClick(View v){
+        startActivity(new Intent(MainActivity.this, NewGoalActivity.class));
+    }
+
+    public void seeImpactOnClick(View v){
+        startActivity(new Intent(MainActivity.this, SeeImpactActivity.class));
+    }
 
 }

@@ -27,7 +27,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Set A New Goal" />
+                android:text="Set A New Goal"
+                android:onClick="newGoalOnClick"/>
         </TableRow>
 
         <TableRow
@@ -39,7 +40,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="See My Goals" />
+                android:text="See My Goals"
+                android:onClick="seeGoalsOnClick"/>
         </TableRow>
 
         <TableRow
@@ -51,7 +53,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="See My Progress" />
+                android:text="See My Progress"
+                android:onClick="seeImpactOnClick"/>
         </TableRow>
     </TableLayout>
 
