@@ -1,11 +1,9 @@
 package com.nwhacks2019.ecoplanner.model;
 
-import java.util.Date;
-
 public class ShowerShorten extends Goal {
 
     public ShowerShorten(){
-        // construct
+        System.out.println("Hello");
     }
     public void future(String future){
         // do something
@@ -14,3 +12,4 @@ public class ShowerShorten extends Goal {
         // do something
     }
 }
+
