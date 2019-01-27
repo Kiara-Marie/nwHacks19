@@ -3,7 +3,7 @@ import java.util.HashSet;
 
 public class User {
     private int id;
-    private HashSet<Goal> goals;
+    private HashSet<Goal> goals = new HashSet<>();
 
     public User(int id){
         this.id = id;
