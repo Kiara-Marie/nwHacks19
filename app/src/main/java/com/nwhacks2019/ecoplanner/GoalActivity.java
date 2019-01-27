@@ -53,7 +53,11 @@ public class GoalActivity extends AppCompatActivity {
                 }
             };
             alertDialogBuilder.setPositiveButton(R.string.tryGoalAgain, positiveListener);
-            alertDialogBuilder.setMessage("The parameters you entered don't make sense... Please try again");
+            if (!e.getMessage().equals("")){
+                alertDialogBuilder.setMessage(e.getMessage());
+            } else {
+                alertDialogBuilder.setMessage("Something went wrong. Please try again");
+            }
             alertDialogBuilder.create();
             alertDialogBuilder.show();
         }

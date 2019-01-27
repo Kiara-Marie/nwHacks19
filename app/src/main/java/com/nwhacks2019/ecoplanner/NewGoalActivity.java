@@ -75,6 +75,9 @@ public class NewGoalActivity extends AppCompatActivity {
 
     private GoalCategory makeDiet(){
         ArrayList<GoalType> dietTypes = new ArrayList<>();
+        View.OnClickListener waterListener = new CategoryDecisionListener();
+        GoalType showerShorten = new GoalType("Reduce beef consumption");
+        dietTypes.add(beefReduce);
         View.OnClickListener dietListener = new CategoryDecisionListener();
         GoalCategory diet = new GoalCategory("Diet",dietTypes,dietListener);
         ((CategoryDecisionListener) dietListener).gc = diet;
