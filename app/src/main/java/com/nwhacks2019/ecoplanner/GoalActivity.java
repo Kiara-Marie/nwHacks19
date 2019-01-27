@@ -45,7 +45,7 @@ public class GoalActivity extends AppCompatActivity {
             Controller.updateGoalCurr(enterCurr.getText().toString());
             Controller.updateGoalPlan(enterGoal.getText().toString());
         } catch(GoalFailedException e){
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+/*            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             DialogInterface.OnClickListener positiveListener = new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -53,9 +53,13 @@ public class GoalActivity extends AppCompatActivity {
                 }
             };
             alertDialogBuilder.setPositiveButton(R.string.tryGoalAgain, positiveListener);
-            alertDialogBuilder.setMessage("The parameters you entered don't make sense... Please try again");
+            if (!e.getMessage().equals("")){
+                alertDialogBuilder.setMessage(e.getMessage());
+            } else {
+                alertDialogBuilder.setMessage("Something went wrong. Please try again");
+            }
             alertDialogBuilder.create();
-            alertDialogBuilder.show();
+            alertDialogBuilder.show();*/
         }
         startActivity(new Intent(GoalActivity.this, MainActivity.class));
     }

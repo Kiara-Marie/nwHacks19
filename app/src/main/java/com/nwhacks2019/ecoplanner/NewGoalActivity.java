@@ -58,7 +58,7 @@ public class NewGoalActivity extends AppCompatActivity {
     private GoalCategory makeWater(){
         ArrayList<GoalType> waterTypes = new ArrayList<>();
         View.OnClickListener waterListener = new CategoryDecisionListener();
-        GoalType showerShorten = new GoalType("Shower Shorten");
+        GoalType showerShorten = new GoalType(GoalType.types.SHOWER);
         waterTypes.add(showerShorten);
         GoalCategory water = new GoalCategory("Water Use",waterTypes,waterListener);
         ((CategoryDecisionListener) waterListener).gc = water;
@@ -75,6 +75,23 @@ public class NewGoalActivity extends AppCompatActivity {
 
     private GoalCategory makeDiet(){
         ArrayList<GoalType> dietTypes = new ArrayList<>();
+
+        View.OnClickListener beefListener = new CategoryDecisionListener();
+        GoalType beefReduce = new GoalType(GoalType.types.BEEF);
+        dietTypes.add(beefReduce);
+
+        View.OnClickListener chickenListener = new CategoryDecisionListener();
+        GoalType chickenReduce = new GoalType(GoalType.types.CHICKEN);
+        dietTypes.add(chickenReduce);
+
+        View.OnClickListener porkListener = new CategoryDecisionListener();
+        GoalType porkReduce = new GoalType(GoalType.types.PORK);
+        dietTypes.add(beefReduce);
+
+        View.OnClickListener eggsListener = new CategoryDecisionListener();
+        GoalType eggReduce = new GoalType(GoalType.types.EGGS);
+        dietTypes.add(eggReduce);
+
         View.OnClickListener dietListener = new CategoryDecisionListener();
         GoalCategory diet = new GoalCategory("Diet",dietTypes,dietListener);
         ((CategoryDecisionListener) dietListener).gc = diet;
